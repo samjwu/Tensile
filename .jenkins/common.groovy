@@ -46,8 +46,8 @@ def runCompileCommand(platform, project, jobName, boolean debug=false)
     String buildThreads = maxThreads.toString() // if hipcc is used may be multiplied by parallel-jobs
 
     def command = """#!/usr/bin/env bash
-            set -ex
             hostname
+            set -ex
             cd ${project.paths.project_build_prefix}
 
             export PATH=/opt/rocm/bin:\$PATH
